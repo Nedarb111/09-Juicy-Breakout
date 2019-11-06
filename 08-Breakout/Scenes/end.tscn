@@ -1,0 +1,19 @@
+[gd_scene format=2]
+
+[node name="Game Over" type="Node2D"]
+
+[node name="Message" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Message"]
+margin_right = 1024.0
+margin_bottom = 608.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="Label" type="Label" parent="Message"]
+margin_left = 64.0
+margin_top = 224.0
+margin_right = 928.0
+margin_bottom = 320.0
+text = "Game over? I suppose it's up to you. The very notion of a game being over is left up to whoever is playing it. If you \"lost\" the game, is inherently over? Are you going to wallow in your own self pitty and have no possible conception of continuation due to your own lack of willpower, or are you going to take arms and give this one more shot? Will you look at the multicolored tiles in conquest and vanquish each of them with your beatiful (albeit basic) white ball? I wonder. Do you have what it takes?? So I will not say \"game over\", instead I ask it. Is this \"game over\"?? The choice is yours."
+align = 1
+autowrap = true
