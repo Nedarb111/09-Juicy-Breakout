@@ -13,7 +13,7 @@ func _input(event):
  if event is InputEventMouseButton and event.pressed:
   if not get_parent().has_node("Ball"):
    var ball = new_ball.instance()
-   ball.position = position - Vector2(0, 32)
+   ball.position = get_node("/root/Node2D/World/Paddle").position - Vector2(0, 32)
    ball.name = "Ball"
    ball.linear_velocity = Vector2(200, -200)
    get_parent().add_child(ball)

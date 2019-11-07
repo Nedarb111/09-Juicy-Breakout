@@ -16,6 +16,9 @@ func _physics_process(delta):
  var bodies = get_colliding_bodies()
  for body in bodies:
   if body.is_in_group("Tiles"):
+   if body.get_parent().name == "Red Tiles":
+     get_node("/root/Node2D/World").make_ball()
+
    emit_signal("score",body.score)
    body.queue_free()
   if body.get_name() == "Paddle":

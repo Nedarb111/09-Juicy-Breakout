@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/James Game Idea 3 (Bubbly Thingy).wav-cc920f04beab5b90f96d3685dca2d6ea.sample"
+
+[deps]
+
+source_file="res://Assets/James Game Idea 3 (Bubbly Thingy).wav"
+dest_files=[ "res://.import/James Game Idea 3 (Bubbly Thingy).wav-cc920f04beab5b90f96d3685dca2d6ea.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
