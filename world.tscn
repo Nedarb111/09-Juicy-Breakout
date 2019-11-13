@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://World.gd" type="Script" id=1]
 [ext_resource path="res://Paddle.gd" type="Script" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://Lives.gd" type="Script" id=6]
 [ext_resource path="res://Score.gd" type="Script" id=7]
 [ext_resource path="res://Assets/James Game Idea 3 (Bubbly Thingy).wav" type="AudioStream" id=8]
+[ext_resource path="res://Assets/Space-Thingy.ogv" type="VideoStream" id=9]
+[ext_resource path="res://VideoPlayer.gd" type="Script" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 50.7103, 12.4337 )
@@ -40,7 +42,6 @@ polygon = PoolVector2Array( 0, 0, 1024, 0, 1024, 608, 1088, 608, 1088, -64, -64,
 [node name="Tiles" type="Node" parent="World"]
 
 [node name="Gray Tiles" type="Node" parent="World/Tiles"]
-editor/display_folded = true
 
 [node name="Tile" parent="World/Tiles/Gray Tiles" instance=ExtResource( 5 )]
 position = Vector2( 128, 320 )
@@ -67,10 +68,9 @@ position = Vector2( 416, 320 )
 position = Vector2( 320, 320 )
 
 [node name="Tile9" parent="World/Tiles/Gray Tiles" instance=ExtResource( 5 )]
-position = Vector2( 224, 320 )
+position = Vector2( 416, 256 )
 
 [node name="Red Tiles" type="Node" parent="World/Tiles"]
-editor/display_folded = true
 
 [node name="Tile" parent="World/Tiles/Red Tiles" instance=ExtResource( 5 )]
 position = Vector2( 128, 256 )
@@ -78,26 +78,14 @@ position = Vector2( 128, 256 )
 [node name="Tile2" parent="World/Tiles/Red Tiles" instance=ExtResource( 5 )]
 position = Vector2( 896, 256 )
 
-[node name="Tile3" parent="World/Tiles/Red Tiles" instance=ExtResource( 5 )]
-position = Vector2( 800, 256 )
-
 [node name="Tile4" parent="World/Tiles/Red Tiles" instance=ExtResource( 5 )]
-position = Vector2( 704, 256 )
+position = Vector2( 896, 64 )
 
 [node name="Tile5" parent="World/Tiles/Red Tiles" instance=ExtResource( 5 )]
 position = Vector2( 608, 256 )
 
-[node name="Tile6" parent="World/Tiles/Red Tiles" instance=ExtResource( 5 )]
-position = Vector2( 512, 256 )
-
 [node name="Tile7" parent="World/Tiles/Red Tiles" instance=ExtResource( 5 )]
-position = Vector2( 416, 256 )
-
-[node name="Tile8" parent="World/Tiles/Red Tiles" instance=ExtResource( 5 )]
-position = Vector2( 320, 256 )
-
-[node name="Tile9" parent="World/Tiles/Red Tiles" instance=ExtResource( 5 )]
-position = Vector2( 224, 256 )
+position = Vector2( 512, 130 )
 
 [node name="Blue Tiles" type="Node" parent="World/Tiles"]
 editor/display_folded = true
@@ -130,7 +118,6 @@ position = Vector2( 320, 192 )
 position = Vector2( 224, 192 )
 
 [node name="Purple Tiles" type="Node" parent="World/Tiles"]
-editor/display_folded = true
 
 [node name="Tile" parent="World/Tiles/Purple Tiles" instance=ExtResource( 5 )]
 position = Vector2( 128, 128 )
@@ -142,19 +129,19 @@ position = Vector2( 896, 128 )
 position = Vector2( 800, 128 )
 
 [node name="Tile4" parent="World/Tiles/Purple Tiles" instance=ExtResource( 5 )]
-position = Vector2( 704, 128 )
+position = Vector2( 800, 256 )
 
 [node name="Tile5" parent="World/Tiles/Purple Tiles" instance=ExtResource( 5 )]
 position = Vector2( 608, 128 )
 
 [node name="Tile6" parent="World/Tiles/Purple Tiles" instance=ExtResource( 5 )]
-position = Vector2( 512, 128 )
+position = Vector2( 510, 256 )
 
 [node name="Tile7" parent="World/Tiles/Purple Tiles" instance=ExtResource( 5 )]
 position = Vector2( 416, 128 )
 
 [node name="Tile8" parent="World/Tiles/Purple Tiles" instance=ExtResource( 5 )]
-position = Vector2( 320, 128 )
+position = Vector2( 320, 256 )
 
 [node name="Tile9" parent="World/Tiles/Purple Tiles" instance=ExtResource( 5 )]
 position = Vector2( 224, 128 )
@@ -165,7 +152,7 @@ position = Vector2( 224, 128 )
 position = Vector2( 128, 64 )
 
 [node name="Tile2" parent="World/Tiles/Green Tiles" instance=ExtResource( 5 )]
-position = Vector2( 896, 64 )
+position = Vector2( 704, 256 )
 
 [node name="Tile3" parent="World/Tiles/Green Tiles" instance=ExtResource( 5 )]
 position = Vector2( 800, 64 )
@@ -204,3 +191,10 @@ script = ExtResource( 7 )
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="World"]
 stream = ExtResource( 8 )
 autoplay = true
+
+[node name="VideoPlayer" type="VideoPlayer" parent="."]
+margin_right = 1020.0
+margin_bottom = 600.0
+stream = ExtResource( 9 )
+autoplay = true
+script = ExtResource( 10 )
