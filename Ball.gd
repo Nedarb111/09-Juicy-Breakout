@@ -20,6 +20,7 @@ func _physics_process(delta):
      get_node("/root/Node2D/World").make_ball()
 
    emit_signal("score",body.score)
+   get_node("/root/Node2D/World/Blop").playing = true
    body.queue_free()
   if body.get_name() == "Paddle":
    pass

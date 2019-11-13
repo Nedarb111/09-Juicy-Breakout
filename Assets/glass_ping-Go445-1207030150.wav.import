@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/glass_ping-Go445-1207030150.wav-0ccf296b332807cf4271cef266406f13.sample"
+
+[deps]
+
+source_file="res://Assets/glass_ping-Go445-1207030150.wav"
+dest_files=[ "res://.import/glass_ping-Go445-1207030150.wav-0ccf296b332807cf4271cef266406f13.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

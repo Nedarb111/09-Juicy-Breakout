@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://World.gd" type="Script" id=1]
 [ext_resource path="res://Paddle.gd" type="Script" id=2]
@@ -8,13 +8,15 @@
 [ext_resource path="res://Lives.gd" type="Script" id=6]
 [ext_resource path="res://Score.gd" type="Script" id=7]
 [ext_resource path="res://Assets/James Game Idea 3 (Bubbly Thingy).wav" type="AudioStream" id=8]
-[ext_resource path="res://Assets/Space-Thingy-2.ogv" type="VideoStream" id=9]
-[ext_resource path="res://VideoPlayer.gd" type="Script" id=10]
+[ext_resource path="res://Assets/Blop-Mark_DiAngelo-79054334.wav" type="AudioStream" id=9]
+[ext_resource path="res://Assets/Game-Background-Mountains.ogv" type="VideoStream" id=10]
+[ext_resource path="res://VideoPlayer.gd" type="Script" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 50.7103, 12.4337 )
 
 [node name="Node2D" type="Node2D"]
+position = Vector2( 7, 0 )
 
 [node name="World" type="Node" parent="."]
 script = ExtResource( 1 )
@@ -124,16 +126,37 @@ position = Vector2( 960, 420 )
 [node name="Tile18" parent="World/Tiles/Green Tiles" instance=ExtResource( 5 )]
 position = Vector2( 70, 50 )
 
+[node name="Tile19" parent="World/Tiles/Green Tiles" instance=ExtResource( 5 )]
+position = Vector2( 840, 192 )
+
+[node name="Tile20" parent="World/Tiles/Green Tiles" instance=ExtResource( 5 )]
+position = Vector2( 960, 240 )
+
+[node name="Tile21" parent="World/Tiles/Green Tiles" instance=ExtResource( 5 )]
+position = Vector2( 170, 190 )
+
+[node name="Tile22" parent="World/Tiles/Green Tiles" instance=ExtResource( 5 )]
+position = Vector2( 170, 292 )
+
+[node name="Tile23" parent="World/Tiles/Green Tiles" instance=ExtResource( 5 )]
+position = Vector2( 60, 242 )
+
+[node name="Tile24" parent="World/Tiles/Green Tiles" instance=ExtResource( 5 )]
+position = Vector2( 840, 292 )
+
 [node name="Lives" type="Label" parent="World"]
-margin_right = 40.0
-margin_bottom = 14.0
+margin_left = 362.0
+margin_top = 30.0
+margin_right = 402.0
+margin_bottom = 44.0
 text = "Lives:"
 script = ExtResource( 6 )
 
 [node name="Score" type="Label" parent="World"]
-margin_left = 928.0
-margin_right = 968.0
-margin_bottom = 14.0
+margin_left = 648.0
+margin_top = 34.0
+margin_right = 688.0
+margin_bottom = 48.0
 text = "Score:"
 script = ExtResource( 7 )
 
@@ -141,9 +164,13 @@ script = ExtResource( 7 )
 stream = ExtResource( 8 )
 autoplay = true
 
-[node name="VideoPlayer" type="VideoPlayer" parent="."]
-margin_right = 1020.0
-margin_bottom = 600.0
+[node name="Blop" type="AudioStreamPlayer2D" parent="World"]
 stream = ExtResource( 9 )
+
+[node name="VideoPlayer" type="VideoPlayer" parent="."]
+margin_left = -4.0
+margin_right = 1016.0
+margin_bottom = 600.0
+stream = ExtResource( 10 )
 autoplay = true
-script = ExtResource( 10 )
+script = ExtResource( 11 )
