@@ -173,4 +173,5 @@ margin_right = 1016.0
 margin_bottom = 600.0
 stream = ExtResource( 10 )
 autoplay = true
+buffering_msec = 1000
 script = ExtResource( 11 )

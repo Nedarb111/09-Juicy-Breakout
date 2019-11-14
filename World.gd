@@ -8,6 +8,10 @@ export var lives = 3
 func increase_score(s):
 	score += int(s)
 	find_node("Score").update_score()
+	if score == 500:
+		lives += 1
+	if score == 1000:
+		lives += 1
  
 func decrease_lives():
 	lives -= 1
